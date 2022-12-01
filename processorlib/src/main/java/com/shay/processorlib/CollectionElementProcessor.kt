@@ -1,5 +1,6 @@
 
 import com.google.auto.service.AutoService
+import com.squareup.javapoet.JavaFile
 import java.io.File
 import java.util.logging.Logger
 import javax.annotation.processing.AbstractProcessor
@@ -23,11 +24,16 @@ class CollectionElementProcessor: AbstractProcessor() {
         roundEnv: RoundEnvironment?
     ): Boolean {
         if (roundEnv != null) {
+            //获取所有CollectionElement注解的元素
             var elements =
                 roundEnv.getElementsAnnotatedWith(CollectionElement::class.java)
             elements.forEach {
+                //把有该注解的标注的元素转为可以获取注解类/域的信息的typeElement
                 val typeElement = it as TypeElement
-                val file =
+                //获取该注解元素下的CollectionElement注解的信息
+                var curClassElement = typeElement.getAnnotation(CollectionElement::class.java)
+                var className = typeElement.simpleName
+                val file = JavaFile.Builder()
             }
         }
     }
