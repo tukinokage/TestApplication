@@ -1,6 +1,7 @@
 
 
 import java.lang.annotation.RetentionPolicy
+import java.util.*
 
 /**
  * PACK com.masadoraandroid.site.annotation
@@ -14,3 +15,7 @@ import java.lang.annotation.RetentionPolicy
 @Retention(AnnotationRetention.SOURCE)
 @Target(AnnotationTarget.CLASS)
 annotation class  CollectionElement(val collectionName: String = "Default")
+/*
+@Retention(AnnotationRetention.SOURCE)
+@Target(AnnotationTarget.CLASS)
+annotation class CollectionType<T : Any?>(val collectionType:Class<in T> = Object::class.java)*/
