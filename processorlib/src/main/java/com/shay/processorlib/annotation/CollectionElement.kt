@@ -1,7 +1,5 @@
 
 
-import java.lang.annotation.RetentionPolicy
-import java.util.*
 
 /**
  * PACK com.masadoraandroid.site.annotation
@@ -11,10 +9,11 @@ import java.util.*
  * DESCRIBE
  * <p>
  */
-// TODO:2022/11/30 
+// TODO:2022/11/30
 @Retention(AnnotationRetention.SOURCE)
 @Target(AnnotationTarget.CLASS)
-annotation class  CollectionElement(val collectionName: String = "Default")
+@MustBeDocumented
+annotation class CollectionElement(val collectionName: String = "Default")
 /*
 @Retention(AnnotationRetention.SOURCE)
 @Target(AnnotationTarget.CLASS)

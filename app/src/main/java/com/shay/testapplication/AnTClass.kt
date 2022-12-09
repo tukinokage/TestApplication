@@ -1,6 +1,7 @@
 package com.shay.testapplication
 
-import CollectionElement
+
+import com.masadora.processorjavalib.annotation.CollectionElement
 
 /**
  * PACK com.shay.testapplication
@@ -13,7 +14,9 @@ import CollectionElement
 // TODO:2022/12/1 
 
 @CollectionElement(collectionName = "TestClass")
-class TestClass {
-
+class AnTClass {
+    fun getContentText():String{
+        return "芝士雪豹"
+    }
 
 }
