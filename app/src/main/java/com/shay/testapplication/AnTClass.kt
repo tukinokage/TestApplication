@@ -1,7 +1,7 @@
 package com.shay.testapplication
 
+import com.masadora.annotationlib.annotation.CollectionElement
 
-import com.masadora.processorjavalib.annotation.CollectionElement
 
 /**
  * PACK com.shay.testapplication

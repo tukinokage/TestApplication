@@ -16,3 +16,4 @@ rootProject.name = "TestApplication"
 include ':app'
 include ':processorlib'
 include ':processorjavalib'
+include ':annotationLib'

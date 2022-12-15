@@ -2,7 +2,7 @@ package com.masadora.processorjavalib;
 
 import com.google.auto.common.MoreElements;
 import com.google.auto.service.AutoService;
-import com.masadora.processorjavalib.annotation.CollectionElement;
+import com.masadora.annotationlib.annotation.CollectionElement;
 import com.squareup.javapoet.JavaFile;
 import com.squareup.javapoet.MethodSpec;
 import com.squareup.javapoet.TypeSpec;

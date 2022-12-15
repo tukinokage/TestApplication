@@ -25,8 +25,13 @@ import kotlin.collections.ArrayList
 // TODO:2022/12/1 
 @AutoService(Processor::class)
 public open class CollectionElementProcessor: AbstractProcessor() {
+    lateinit var mMessager:Messager
+    lateinit var mFiler:Filer
     override fun init(processingEnv: ProcessingEnvironment?) {
         super.init(processingEnv)
+        if (processingEnv != null) {
+            mMessager = processingEnv.getMessager()
+        };
     }
 
     /**这里你必须指定，这个注解处理器是注册给哪个注解的。注意，它的返回值是一个字符串的集合，包含本处理器想要处理的注解类型的合法全称*/
@@ -102,7 +107,7 @@ public open class CollectionElementProcessor: AbstractProcessor() {
                     .addFileComment(" This codes are generated automatically. Do not modify!")
                     .build()
                 // write to file
-                javaFile.writeTo(processingEnv.filer)
+                javaFile.writeTo(mFiler)
             } catch (e: IOException) {
                 e.printStackTrace()
             }
