@@ -24,7 +24,7 @@ import kotlin.collections.ArrayList
  */
 // TODO:2022/12/1 
 @AutoService(Processor::class)
-public open class CollectionElementProcessor: AbstractProcessor() {
+class CollectionElementProcessor: AbstractProcessor() {
     lateinit var mMessager:Messager
     lateinit var mFiler:Filer
     override fun init(processingEnv: ProcessingEnvironment?) {
